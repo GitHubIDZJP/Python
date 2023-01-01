@@ -1,11 +1,4 @@
-import requests
-import parsel
-import requests
-# from urllib import request
-from bs4 import BeautifulSoup
-import time
-import random
-from random import randint
+
 import requests
 from bs4 import BeautifulSoup
 
