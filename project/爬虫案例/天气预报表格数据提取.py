@@ -31,6 +31,7 @@ url = 'http://www.tianqihoubao.com/aqi/beijing-202011.html'
 headers = {
      'User-Agent':'Chrome/108.0.0.0'
 }
+
 requestContent = pd.read_html(url,encoding='gb2312',header=0) #返回值是列表
 
 requestContent[0].to_csv('北京2020天气预报.csv',encoding='utf-8-sig',index=False)#1保存为csv格式，可以记事本和表格打开
