@@ -45,8 +45,8 @@ for book in fecthAll_Arr:
     news = {"标题": title, "发布时间": author,"发布时间1": price}
     news_dict_list.append(news)
     #2创建csv
-    # fo = open("./news.txt", "w", newline='', encoding='utf-8')
-    fo = open("/Users/zoujunping/python采集资源/豆瓣排行榜/news.txt", "w", newline='', encoding='utf-8')
+    fo = open("./news.txt", "w", newline='', encoding='utf-8')
+    # fo = open("/Users/zoujunping/python采集资源/豆瓣排行榜/news.txt", "w", newline='', encoding='utf-8')
     #3表头
     header = ["标题", "发布时间","发布时间1"]
     writer = csv.DictWriter(fo, header)
