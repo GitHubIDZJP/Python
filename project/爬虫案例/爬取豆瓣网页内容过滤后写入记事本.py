@@ -3,9 +3,7 @@ import csv
 
 import requests
 from  bs4 import  BeautifulSoup
-import  openpyxl as op
-import pandas as pd
-import xlwt
+
 # 模拟浏览器
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
@@ -47,7 +45,8 @@ for book in fecthAll_Arr:
     news = {"标题": title, "发布时间": author,"发布时间1": price}
     news_dict_list.append(news)
     #2创建csv
-    fo = open("news.csv", "w", newline='', encoding='utf-8')
+    # fo = open("./news.txt", "w", newline='', encoding='utf-8')
+    fo = open("/Users/zoujunping/python采集资源/豆瓣排行榜/news.txt", "w", newline='', encoding='utf-8')
     #3表头
     header = ["标题", "发布时间","发布时间1"]
     writer = csv.DictWriter(fo, header)
