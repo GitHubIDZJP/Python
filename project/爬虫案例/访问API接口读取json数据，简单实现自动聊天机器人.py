@@ -5,6 +5,7 @@ pip install quote
 
 # http://api.qingyunke.com/api.php?key=free&appid=0&msg=  API地址
  智能机器人API： https://www.sojson.com/api/semantic.html
+ 支持功能：天气、翻译、藏头诗、笑话、歌词、计算、域名信息/备案/收录查询、IP查询、手机号码归属、人工智能聊天
 '''
 import  urllib.request
 from  urllib.parse import quote
@@ -15,7 +16,7 @@ def main():
     # 循环处理，客户端发送的聊天信息
     while True:
         # 定义一个url地址 格式为：API地址 + 用户聊天输入发送的语句内容
-        url = 'http://api.qingyunke.com/api.php?key=free&appid=0&msg=' + input("请输入您要发送的消息")
+        url = 'http://api.qingyunke.com/api.php?key=free&appid=0&msg=' + input("请输入您要发送的消息:")
         # urllib.request.urlopen不支持中英文混合的字符串。
         # 所以应使用urllib.parse.quote进行转换。
         # 方法quote的参数safe表示可以忽略的字符
@@ -53,4 +54,5 @@ if __name__=="__main__":
 请输入您要发送的消息
 
 '''
+
 

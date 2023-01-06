@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+ 解决法子:
+ 终端执行:
+ ln -s /etc/ssl/* /Library/Frameworks/Python.framework/Versions/3.9/etc/openssl
+
+
+2
+
+requestURL = 'https://www.dxsbb.com/news/64977.html'
+requestContent = pd.read_html(requestURL)[0]
+m8 = pd.DataFrame(requestContent)
+print(requestContent)
+#行6:不报错,保存.xlsx后缀可以
+m8.to_excel('爬虫兼职.xlsx',index=0)
+#行8:报错保存.xls后缀不可以
+m8.to_excel('爬虫兼职.xls',index=0)
+errorMsg:
+FutureWarning: As the xlwt package is no longer maintained, the xlwt engine will be removed in a future version of pandas. This is the only engine in pandas that supports writing in the xls format. Install openpyxl and write to an xlsx file instead. You can set the option io.excel.xls.writer to 'xlwt' to silence this warning. While this option is deprecated and will also raise a warning, it can be globally set and the warning suppressed.
+  m8.to_excel('爬虫兼职.xls',index=0)
+  中文翻译:
+  由于不再维护xlwt包，xlwt引擎将在panda的未来版本中删除。这是pandas中唯一支持xls格式编写的引擎。安装openpyxl并写入xlsx文件。你可以将io.excel.xls.writer选项设置为'xlwt'来关闭此警告。虽然此选项已弃用，并且还会引发警告，但可以全局设置并抑制警告
+
+  error解析：
+  由于pandas版本更替，可能在未来的版本中pandas向Excel写入文件to_excel函数底层不在调用xlwt。小伙伴用下面的代码调用to_excel函数的时候选择openpyxl模块作为底层即可！
+
+  所以最新的的解决法子:
+  1 安装openpyxl
+  pip install openpyxl
+  2 调用to_excel函数时选择openpyxl模块
+
