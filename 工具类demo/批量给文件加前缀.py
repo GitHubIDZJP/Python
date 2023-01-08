@@ -1,6 +1,6 @@
 import os,sys                       #导入模块
 def add_prefix_files():             #定义函数名称
-    mark = 'test-'                 #准备添加的前缀内容
+    mark = '傻逼-'                 #准备添加的前缀内容
     old_names = os.listdir( path )  #取路径下的文件名，生成列表
     for old_name in old_names:      #遍历列表下的文件名
             if  old_name!= sys.argv[0]:  #代码本身文件路径，防止脚本文件放在path路径下时，被一起重命名
