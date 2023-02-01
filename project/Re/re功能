@@ -1,0 +1,9 @@
+re提取、匹配、替换
+
+1、提取findall：
+re.findall(【正则表达式】, 【被提取的字符串】)
+注意：返回的类型是列表
+
+
+学习连接:
+https://www.shuzhiduo.com/A/RnJW3B3YJq/
