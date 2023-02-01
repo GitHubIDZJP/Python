@@ -64,3 +64,29 @@ created_at "Wed Dec 21 09:14:15 +0800 2022"
 screen_name "新京报"
 
 '''
+
+
+
+
+
+'''
+获取日期与时间
+# date = r'\d{4}-\d{2}-\d{2}'
+# date_title=re.findall(date,r)
+# print('日期', date_title)
+#
+# time = r'\d{1,2}(?:(?:am|pm)|(?::\d{1,2})(?:am|pm)?)'
+# time_title = re.findall(time, r)
+# print("日期时间:\n", time_title)
+#
+# res = r'<a .*?>(.*?)</a>'
+# # texts = re.findall(res, content, re.S | re.M)
+#
+# timer_title = re.findall(date, r, re.S | re.M)
+# print('xxxxxxxxxxxxxxxx', timer_title)
+# #打印index值
+# for t in timer_title:
+#     print(t)
+
+
+'''
