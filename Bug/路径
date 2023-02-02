@@ -1,1 +1,7 @@
 save_dir= '../资源包/百度图片'
+
+保存
+        with open(page_path,'w',encoding='utf-8') as fp:
+            fp.write(page_data)
+            fp.close()
+            print(li_name,li_url,'保存成功')
