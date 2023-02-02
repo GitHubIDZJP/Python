@@ -1,9 +1,7 @@
 from bs4 import BeautifulSoup
-from urllib.request import urlopen
 import requests
 import re
-import time
-import random
+
 
 url = "https://s.weibo.com/weibo?q=%E8%87%B4%E5%B8%82%E6%B0%91%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1"
 

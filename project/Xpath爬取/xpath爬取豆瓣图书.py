@@ -57,6 +57,7 @@ print(book_picture)
 
 #获取图片相对链接地址
 selling_books1 = tree.xpath('//ul[@class="provider-items"]/li/a/@href')
+
 print(selling_books1)#因为是相对链接地址，所以获得的是/provider/63687123/
 
 

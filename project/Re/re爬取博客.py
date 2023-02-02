@@ -3,8 +3,7 @@ headers = {
   # UA 最基本的防爬识别
   'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
 }
-# url = 'https://read.douban.com/provider/all'
-# # result = requests.get(url, headers=headers)  # HTTP GET POST PUT
+
 import re
 import urllib.request
 import  ssl
@@ -15,11 +14,10 @@ ssl._create_default_https_context = ssl._create_unverified_context
 openhead=urllib.request.build_opener()
 openhead.addheaders = [("User-Agent", "Chrome/88.0.4324.188")]
 urllib.request.install_opener(openhead)
-url_douban = "https://read.douban.com/provider/all"
+# url_douban = "https://read.douban.com/provider/all"
 url_blog = "http://www.eastmountyxz.com/"
 resuest = urllib.request.urlopen(url_blog).read().decode('utf-8')
 #模板
-
 
 res = 'a href="(.*?)"'
 fetchContent = re.findall(res,resuest,re.I)
@@ -29,8 +27,15 @@ print('***:' + str(fetchContent))
 # # for url in urls:
 # #     print(url)
 #
-title = re.findall(r'<a>(.*)</a>', resuest,re.S|re.M)
+title = re.findall(r'<title>(.*)</title>', resuest,re.S|re.M)
 print('***网页标题:***\n',title)
+
+a_title = r'<a(.*)</a>'
+titles = re.findall(a_title, resuest,re.S|re.M)
+# titles = re.findall(r'<a (.*)</a >', resuest)
+print(titles)
+for a_title_index in titles:
+  print(a_title_index.split('>')[2])
 #
 #
 #
