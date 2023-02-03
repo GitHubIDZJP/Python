@@ -1,5 +1,8 @@
 save_dir= '../资源包/百度图片'
 
+最外层的路径:  这样就会存到资源包文件夹下了
+../资源包
+
 保存
         with open(page_path,'w',encoding='utf-8') as fp:
             fp.write(page_data)
