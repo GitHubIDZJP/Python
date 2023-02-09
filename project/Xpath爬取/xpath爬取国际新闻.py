@@ -21,17 +21,17 @@ html = html.content.decode('utf-8')
 
 doc = etree.HTML(html)
 # print(tree)
-res = doc.xpath('//ul[@class="tap-head"]/li/text()')
+res = doc.xpath('//div[@class="tap-body list-a"]/dl/dd/h2/a/text()')
 for i in res:
     print('爬取的数据:\n',i)
 
-img = res = doc.xpath('//div[@class="tap-body list-a"]/dl/dt')
+img = res = doc.xpath('//div[@class="tap-body list-a"]/dl/dt/a/img/@src')
 dir_name = '资源包'
 if not os.path.exists(dir_name):
     os.mkdir(dir_name)
 for i_img in res:
-    img_src = i_img.xpath('a/img/@src')[0]
-    print(img_src)
+    # img_src = i_img.xpath('a/img/@src')[0]
+    print(i_img)
 
 newsDetail = res = doc.xpath('//div[@class="tap-body list-a"]/dl/dd/p/text()')
 for i_newDetail in newsDetail:
