@@ -18,9 +18,9 @@ url = 'http://xin.cwan.com/'
 html = requests.get(url, headers=headers)
 html = html.content.decode('utf-8')
 # text/html; charset=gb2312
-
+print('网页\n',html)
 doc = etree.HTML(html)
-# print(tree)
+
 res = doc.xpath('//div[@class="tap-body list-a"]/dl/dd/h2/a/text()')
 for i in res:
     print('爬取的数据:\n',i)
