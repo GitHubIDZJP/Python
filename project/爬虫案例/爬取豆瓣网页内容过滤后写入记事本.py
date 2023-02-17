@@ -8,8 +8,9 @@ from  bs4 import  BeautifulSoup
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
 }
-url = 'https://read.douban.com/provider/all'
-
+url = 'https://www.amazon.com/gp/new-releases/?ref_=nav_cs_newreleases'
+# 亚马逊URL
+AmazonUrl = 'https://www.amazon.com/gp/new-releases/?ref_=nav_cs_newreleases'
 myHeaders = {
     'User-Agent':'Chrome/108.0.0.0'
 }
@@ -29,7 +30,8 @@ myHeaders = {
 
 result = requests.get(url, headers=myHeaders)  # HTTP GET POST PUT
 print(result.status_code)
-
+fetchContent = result.content.decode('utf-8')
+print(fetchContent)
 #最外层class值media
 soup = BeautifulSoup(result.text, 'lxml')
 fecthAll_Arr=soup.findAll('ul',class_='provider-items')
