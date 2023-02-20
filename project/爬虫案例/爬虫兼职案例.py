@@ -26,10 +26,16 @@ from pathlib import Path
 import pandas as pd
 import openpyxl
 import requests
+import  ssl
+
+#外链的网页爬不到css
+ssl._create_default_https_context = ssl._create_unverified_context
 # 2 拿到要爬取的网址
 #  网址 = 'https://www.dxsbb.com/news/64977.html'
-requestURL = 'https://www.dxsbb.com/news/64977.html'
-# requestURL = 'https://www.dxsbb.com/news/42717.html'
+
+#网站404被删除
+
+requestURL = 'https://www.dxsbb.com/news/42717.html'
 # 3 需要通过工具爬取到我想要的内容
 requestContent = pd.read_html(requestURL)[0]
 m8 = pd.DataFrame(requestContent)
