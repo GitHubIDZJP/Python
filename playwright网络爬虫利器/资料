@@ -1,0 +1,7 @@
+网上听说这个框架很厉害，然后就有了下文，试探性玩一下
+
+# python版本至少3.7以上
+pip install playwright
+
+#自动安装Chromium、Firefox、WebKit等浏览器的驱动文件
+python -m playwright install
