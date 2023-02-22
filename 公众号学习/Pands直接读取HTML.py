@@ -1,7 +1,8 @@
 import pandas as pd
 import  ssl
 ssl._create_default_https_context = ssl._create_unverified_context
-df = pd.read_html(io='https://www.12365auto.com/zlts/',encoding='utf-8')[0]
+df = pd.read_html(io='https://www.12365auto.com/zlts/',encoding='utf-8')[0] #车质网
+# df = pd.read_html(io='https://www.dxsbb.com/news/64977.html',encoding='gb2312')[0] #QS世界大学排名
 df.to_csv('./source/1.csv')
 print(df)
 

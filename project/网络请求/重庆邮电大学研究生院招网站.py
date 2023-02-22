@@ -6,7 +6,7 @@ myHeaders = {
     'Cookie':'mLvnBZTNP4mtS=5.MxaNXarcbffs9Sm0iXTQHbG9yl9_c2qfX4ofLiqSurCNVVGICnjh.RIvLHTP6qYSN4dTPgGb66Q_8hjuxULfq; JSESSIONID=4C9E28A09285ADE60C269B9720739ABC; mLvnBZTNP4mtT=BR9670wna82lkyzeXbTdQYu1lBL2I7BQlK2wSrzjggse7hzLvhxLvqAro4RJu54PSw3GP_F8pv3ioMUZziqp2zQfc4jW21qh9ek28L5.1UpG65dHlEB3QbwBxgyGGuNs1JEXPqF1zbehtMtOt.4M_tYfPIU7qx1nBXPQJohrtiXdUOKDRYkLEqIKYOKpwpWsREUJWIZ7v1qCx62Nl7CTTsRVSiDY.KdOi4sFYoPP3wVhS.EW9kQa9.yB2R1.VFSd1j9Co1iRz5YHfy9MyHgybBahsM0L7pmmCxzqshxS2MohAdJKwged2asGY04x.RaN03aj.baudnIvZ3xOIVEn3kJ0q57RpB6RKkVVcXP2PnELujEx7BNqyo8lHzCNUeET'
 }
 result=requests.get(url,headers=myHeaders)
-
+result.content.decode('utf-8')
 # print(result.content.decode('utf-8'))
 print(result.text)
 print('----------------------------')

@@ -1,0 +1,7 @@
+PyQuery和scrapy Selectors
+
+在PyQuery中，class的值写在小数点 . 后面，标签直接写（ID是写在#后面）
+h2.content-title
+h2是HTML元素
+content-title 是class值
+

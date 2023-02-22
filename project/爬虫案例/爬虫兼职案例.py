@@ -35,17 +35,19 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 #网站404被删除
 
-requestURL = 'https://www.dxsbb.com/news/42717.html'
+requestURL = 'https://www.dxsbb.com/news/64977.html'
 # 3 需要通过工具爬取到我想要的内容
 requestContent = pd.read_html(requestURL)[0]
+
 m8 = pd.DataFrame(requestContent)
+
 '''
 保存后缀为xlsx可以用，但是这方法已经被Pandas放弃，虽然也可以用
 print(requestContent)
 m8.to_excel('爬虫兼职.xls',index=0)
 '''
 # data_folder = Path("代码run后保存路径")
-m8.to_excel('/Users/zoujunping/Python/代码run后保存路径/爬虫兼职1.xls',engine='openpyxl')
+m8.to_excel('/Users/zoujunping/Python/代码run后保存路径/爬虫兼职1001.xls',engine='openpyxl')
 
 #to_excel('路径')
 #to_excel(r'路径') 加r保存的文件夹则红色
