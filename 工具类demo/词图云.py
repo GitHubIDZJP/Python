@@ -2,8 +2,8 @@
 print('词图云')
 import numpy as np
 import matplotlib.pyplot as plt
-from wordcloud import WordCloud
-
+# from wordcloud import WordCloud
+from wordcloud import  WordCloud
 text = "ceshdf"  #暂时只能英文，中文会只显示矩形
 
 x, y = np.ogrid[:300, :300]
