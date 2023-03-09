@@ -1,0 +1,5 @@
+#通过name查找元素
+     h3 = li.find(name='h3')
+
+#通过class查找元素
+     # title = li.find('h3', class_=False).text.strip()
