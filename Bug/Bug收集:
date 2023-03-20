@@ -34,7 +34,7 @@ FutureWarning: As the xlwt package is no longer maintained, the xlwt engine will
   验证SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
    <urlopen error [SSL:
 
-   解决法子:
+   权限解决法子:
    import  ssl
    ssl._create_default_https_context = ssl._create_unverified_context
 
